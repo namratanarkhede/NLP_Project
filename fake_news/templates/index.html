@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>fakeNewsDetector</title>
+<style>
+  body{
+    background-image: url("https://wallpaperaccess.com/full/6563644.jpg");
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+  }
+#aa{
+  background-color: #6c757d;
+  opacity : 0.72;
+  color: white;
+  }
+  .btn-download{
+    padding: 14px 40px;
+    margin: 48px 28px;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    align-items: center;
+  }
+  .btn-download:hover{
+    background-color: royalblue;
+  }
+  .lst {
+    display: block;
+    background-color: white;
+    height: 465px;
+    width: 583px;
+    margin: auto;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 26px 9px;
+    margin-top: 70px;
+}
+  .lst>ul{
+    font-size: 21px;
+  }
+  #letsGo {
+    display: block;
+    margin: 17px 19px;
+    padding: 3px 45px;
+    font-size: 33px;
+    border: 2px solid #607d8b;
+    border-radius: 8px;
+}
+  </style>
+  </head>
+  <body style="background-color:lightblue;">
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about_us">About Us</a>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="alert alert-primary alert-dismissible fade show" role="alert" id="aa"><h6>
+<strong>Welcome to our Project! </strong> Here You can verify your news from the given dataset to check whether its fake or real.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></h6>
+</div>
+
+<div class="lst">
+<ul>
+  <li>Firstly Click on the download button to dowload the dataset from the above link.</li>
+  <li>The from the dataset select the appropriate text/news section and try to check whether the news is fake or real. </li>
+  <li>Click on lets go Button to enter the detection page and paste your selected text in textarea of the page.</li>
+  <li>After Entering your text select the Analyze text button to get final result for given text. </li>
+</ul>
+
+<!-- <br> -->
+  <a href="https://github.com/Spidy20/Fake_News_Detection/blob/77ab7ef08a95175c443f8cd19bbe39a5779105e0/news.csv" target = "_blank "download class="btn-download">
+    Download
+  </a>
+  <!-- <br> -->
+  
+  <!-- <br><br><br> -->
+  <div class ="container" >
+    <form action='/analyze' method='post'> {% csrf_token %}
+      <div class="form-floating">
+      </div>
+      
+      <button type="submit" class="btn btn-dark mt-3" id="letsGo">Let's Go</button>
+    </form>
+  </div>
+    
+    
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  </body>
+</html>
