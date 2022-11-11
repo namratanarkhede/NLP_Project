@@ -38,6 +38,8 @@ STEPS=>
 
 5.If you are a linux user type in termnial => python3 manage.py runserver.
 
+6.Please Extract this file at path (Otherwise the project will throw an error)=> fake_news/model/fake_or_real_news.tar.xz
+
 # Dataset
 <p> Click on the download link to download the dataset. </p>
 <a href="dataset/fake_or_real_news.zip"> Download</a>
